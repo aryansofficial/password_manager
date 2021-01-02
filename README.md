@@ -7,6 +7,7 @@ To-Do and Requirnments:
 
     CREATE USER 'pwmanager'@'localhost' IDENTIFIED BY 'pwpassword';
     GRANT ALL PRIVILEGES ON pwmanager.* TO 'pwmanager'@'localhost';
+    source /path/to/pwmanager.sql
 
   2) The python 3 requirnments
     
