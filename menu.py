@@ -10,13 +10,13 @@ first= '''
 2. Sing Up
 Q. Quit
 '''
-
 second = '''
 1. Add new password
 2. Show password for an app or site
 3. Show names of all your the apps
 4. Delete Record
 5. Logout
+6. Generate Password for an app
 Q. quit
 '''
 
@@ -42,6 +42,7 @@ def login_singup():
         choice = input('Choice: ')
         if choice[0].lower() == 'q':
             sys.exit()
+
         elif choice == '1':
             return call_login()
         
@@ -74,7 +75,15 @@ def menu():
             del user_id
             print('Loging out')
             return
+        elif int(choice) == 6:
+            app_password = password_generator()
+            app_name = input('App Name: ')
+            add_password(conn, user_id ,app_name , app_password, password)
+            get_password(conn, user_id,app_name , password)
+            
+
         #os.system(cmd)
+
 
 while True:
     user_id, password = login_singup()
