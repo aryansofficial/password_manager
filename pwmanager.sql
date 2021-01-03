@@ -19,6 +19,7 @@ CREATE TABLE password(
     FOREIGN KEY(user_id) REFERENCES login(user_id)
 );
 
+# DO NOT RUN FURTHER COMMANDS
 #INSERT INTO password(user_id,app_name, password, ini_date) VALUES(1,'facebook.com', 'check', curdate());
 
 #INSERT INTO login(user, password)
